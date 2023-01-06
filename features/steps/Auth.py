@@ -1,8 +1,5 @@
 from behave import *
-import requests
-from Utilities.Configurations import *
 from Payloads.Auth import *
-from Payloads.CreateBooking import *
 from Utilities.Resources import *
 from Services.MakeRequest import *
 
