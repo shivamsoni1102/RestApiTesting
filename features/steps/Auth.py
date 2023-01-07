@@ -1,10 +1,8 @@
 from behave import *
-import requests
-from Utilities.Configurations import *
 from Payloads.Auth import *
-from Payloads.CreateBooking import *
 from Utilities.Resources import *
 from Services.MakeRequest import *
+from Services import GlobalVariables
 
 use_step_matcher("re")
 
@@ -27,4 +25,4 @@ def step_impl(context):
     assert context.response.status_code == 200
     data = context.response.json()
     assert data["token"] is not None
-    context.token = data["token"]
+    GlobalVariables.token = data["token"]
